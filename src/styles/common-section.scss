@@ -1,0 +1,15 @@
+.common__section {
+    background: url("../assets/image/bg/our-coffee_bg.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 100px 0px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.common__section h1{
+    color: #fff;
+    font-weight: 700;
+    font-size: 40px;
+}

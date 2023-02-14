@@ -1,0 +1,109 @@
+.main {
+    min-height: 640px;
+    background: url("../assets/image/bg/main_bg.jpg") center (center/cover) no-repeat;
+
+    &__block {
+        padding: 180px 0 200px 0;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    &__coffee-beans {
+        width: 200px;
+        height: 30px;
+        margin: 0 auto;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__hr {
+        width: 60px;
+    }
+
+    &__beans-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    &__subtitle {
+        margin-top: 35px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    &__btn {
+        margin: 0 auto;
+        margin-top: 18px;
+        padding-top: 1px;
+        width: 120px;
+        height: 30px;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+
+    &__btn-link {
+        text-decoration: none;
+        font-size: 14px;
+        color: #fff;
+    }
+}
+
+.about {
+    min-height: 520px;
+    &__subtitle {
+        width: 529px;
+        height: 223px;
+        margin: 0 auto;
+        margin-top: 40px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+.best {
+    min-height: 495px;
+    background: url("../assets/image/bg/best_bg.jpg") center (center/cover) no-repeat;
+
+    &__product-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 802px;
+        margin: 39px auto 0 auto;
+    }
+
+    &__product-block {
+        display: grid;
+        align-items: end;
+        width: 220px;
+        height: 260px;
+        background: rgba(255, 255, 255, 0.65)
+    }
+
+    &__product-img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+
+    &__product-title {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    &__product-price {
+        font-weight: 700;
+        margin-bottom: 22px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

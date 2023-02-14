@@ -1,0 +1,33 @@
+.header {
+    width: 355px;
+    height: 40px;
+    top: 30px;
+    left: 128px;
+    position: absolute;
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    &__logo {
+        width: 35px;
+        height: 35px;
+        padding-left: 22px;
+    }
+
+    &__nav, a {
+        list-style-type: none;
+        text-decoration: none;
+        color: #fff;
+        font-size: 12px;
+        padding-top: 20px;
+    }
+
+
+    &__nav-active {
+        font-weight: 700;
+    }
+}

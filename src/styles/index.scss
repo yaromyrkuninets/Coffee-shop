@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merienda', sans-serif;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.coffee-beans {
+    width: 200px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hr {
+    width: 60px;
+    color: #000;
+}
+
+.hr-big {
+    width: 240px;
+    margin: 30px auto 0 auto;
+    color: #000;
+}
+
+.beans-img {
+    width: 30px;
+    height: 30px;
+}
+
+.title {
+    font-size: 24px;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.title-pt-0 {
+    font-size: 24px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.footer-bottom {
+    margin-bottom: 20px;
+}

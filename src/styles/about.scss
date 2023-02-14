@@ -1,0 +1,27 @@
+.bgc {
+    background: url("../assets/image/bg/pleasure_bg.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 100px 0px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+        color: #fff;
+    font-weight: 700;
+    font-size: 40px;
+    }
+}
+
+.goods {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px auto 0 auto;
+    width: 697px;
+
+    &__img {
+        width: 272px;
+        height: 355px;
+    }
+}
