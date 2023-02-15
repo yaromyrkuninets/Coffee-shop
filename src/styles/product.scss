@@ -10,49 +10,4 @@
         width: 800px;
         margin-bottom: 30px;
     }
-
-    &__block {
-        margin-top: 60px;
-        // display: grid;
-        // align-items: end;
-        width: 220px;
-        height: 260px;
-        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.10);
-        border-radius: 15px;
-    }
-
-    &__block:hover {
-        cursor: pointer;
-        border: none;
-        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.30);
-    }
-
-    &__img {
-        display: block;
-        margin: 0 auto;
-        margin-top: 37px;
-    }
-
-    &__title {
-        margin-top: 10px;
-        font-size: 14px;
-        text-align: center;
-    }
-
-    &__country {
-        margin-top: 5px;
-        font-size: 14px;
-        margin-right: 20px;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    &__price {
-        margin-top: 5px;
-        font-size: 14px;
-        font-weight: 700;
-        margin-right: 20px;
-        display: flex;
-        justify-content: flex-end;
-    }
 }

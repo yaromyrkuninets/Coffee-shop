@@ -81,8 +81,11 @@
     }
 
     &__product-block {
-        display: grid;
-        align-items: end;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        // display: grid;
+        // align-items: end;
         width: 220px;
         height: 260px;
         background: rgba(255, 255, 255, 0.65)
@@ -91,11 +94,11 @@
     &__product-img {
         display: block;
         margin: 0 auto;
-        margin-top: 15px;
+        margin-bottom: 30px;
     }
 
     &__product-title {
-        margin-top: 5px;
+        margin-bottom: 5px;
         text-align: center;
     }
 

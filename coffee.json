@@ -5,63 +5,63 @@
         "name": "Solimo Coffee Beans 2 kg",
         "country": "Kenya",
         "price": "10.73",
-        "img": "./src/assets/image/items-img/solimo-coffee.jpg"
+        "img": "solimo-coffee"
       },
       {
         "id": 2,
         "name": "Presto Coffee Beans 1 kg",
         "country": "Columbia",
         "price": "15.99",
-        "img": "./src/assets/image/items-img/presto-coffee.jpg"
+        "img": "presto-coffee"
       },
       {
         "id": 3,
         "name": "AROMISTICO Coffee 1 kg",
         "country": "Brazil",
         "price": "6.99",
-        "img": "./src/assets/image/items-img/aromistico-coffee.jpg"
+        "img": "aromistico-coffee"
       },
       {
         "id": 4,
         "name": "AROMISTICO Coffee 1 kg",
         "country": "Brazil",
         "price": "6.99",
-        "img": "./src/assets/image/items-img/aromistico-coffee.jpg"
+        "img": "aromistico-coffee"
       },
       {
         "id": 5,
         "name": "AROMISTICO Coffee 1 kg",
         "country": "Kenya",
         "price": "6.99",
-        "img": "./src/assets/image/items-img/aromistico-coffee.jpg"
+        "img": "aromistico-coffee"
       },
       {
         "id": 6,
         "name": "AROMISTICO Coffee 1 kg",
         "country": "Columbia",
         "price": "6.99",
-        "img": "./src/assets/image/items-img/aromistico-coffee.jpg"
+        "img": "aromistico-coffee"
       },
       {
         "id": 7,
         "name": "AROMISTICO Coffee 1 kg",
         "country": "Brazil",
         "price": "6.99",
-        "img": "./src/assets/image/items-img/aromistico-coffee.jpg"
+        "img": "aromistico-coffee"
       },
       {
         "id": 8,
         "name": "AROMISTICO Coffee 1 kg",
         "country": "Brazil",
         "price": "6.99",
-        "img": "./src/assets/image/items-img/aromistico-coffee.jpg"
+        "img": "aromistico-coffee"
       },
       {
         "id": 9,
         "name": "AROMISTICO Coffee 1 kg",
         "country": "Brazil",
         "price": "6.99",
-        "img": "./src/assets/image/items-img/aromistico-coffee.jpg"
+        "img": "aromistico-coffee"
       }
     ]
 }

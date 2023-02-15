@@ -1,5 +1,3 @@
-
-
 import CommonSection from "../components/UI/CommonSection";
 import AboutGoods from "../components/UI/AboutGoods";
 import Product from "../components/UI/Product";
@@ -27,7 +25,7 @@ const OurCoffee = () => {
                         <div className="filter__look-title">
                             Lookiing for
                         </div>
-                        <input type="text" placeholder="start typing here..." className="filter__look-input" />
+                        <input  type="text" placeholder="start typing here..." className="filter__look-input" />
                     </div>
 
                     <div className="filter__country" id="myDIV">
