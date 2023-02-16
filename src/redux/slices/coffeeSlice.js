@@ -5,7 +5,8 @@ const coffeesAdapter = createEntityAdapter();
 
 const initialState = coffeesAdapter.getInitialState({
     coffeesLoadingStatus: 'idle',
-    coffees: []
+    coffees: [],
+    filteredCoffees: []
 })
 
 export const fetchCoffees = createAsyncThunk(
@@ -20,7 +21,17 @@ const coffeesSlice = createSlice({
     name: 'coffees',
     initialState,
     reducers: {
-        
+        filteredCoffees: (state, action) => {
+			state.coffees = state.filteredCoffees.filter((coffee, e) =>
+                coffee.name.toLowerCase().includes(action.payload.toLowerCase())
+			);
+		},
+        // searchByName: (state, action) => {
+        //     return {
+        //         ...state,
+        //         coffees: [...state.coffees].filter((coffees) => coffees.name.toLowerCase().includes(action.payload.toLowerCase()))
+        //     }
+        // }
     },
     extraReducers: (builder) => {
         builder
@@ -28,6 +39,7 @@ const coffeesSlice = createSlice({
             .addCase(fetchCoffees.fulfilled, (state, action) => {
                 state.coffeesLoadingStatus = 'idle';
                 state.coffees = action.payload;
+                state.filteredCoffees = action.payload;
                 coffeesAdapter.setAll(state, action.payload);
             })
             .addCase(fetchCoffees.rejected, state => {state.coffeesLoadingStatus = 'error'})
@@ -54,9 +66,5 @@ export default reducer;
 // );
 
 export const {
-    heroesFetching,
-    heroesFetched,
-    heroesFetchingError,
-    heroCreated,
-    heroDeleted,
+    filteredCoffees
 } = actions
