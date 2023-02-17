@@ -1,20 +1,6 @@
 .product {
-    // display: flex;
-    // justify-content: space-between;
-
-    &__wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        width: 800px;
-        margin-bottom: 30px;
-    }
-
+    
     &__block {
-        margin-top: 60px;
-        // display: grid;
-        // align-items: end;
         width: 220px;
         height: 260px;
         box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.10);
