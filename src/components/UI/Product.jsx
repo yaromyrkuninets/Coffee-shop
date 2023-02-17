@@ -16,9 +16,6 @@ const Product = () => {
     const coffeesLoadingStatus = useSelector(state => state.coffees.coffeesLoadingStatus);
     const dispatch = useDispatch();
 
-
-    
-
     useEffect(() => {
         dispatch(fetchCoffees());
     }, []);
