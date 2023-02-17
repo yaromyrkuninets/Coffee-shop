@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 
-import {filteredCoffees} from '../redux/slices/coffeeSlice';
+import {filteredCoffeesByName, filteredCoffeesByCoutry, reset} from '../redux/slices/coffeeSlice';
 
 import CommonSection from "../components/UI/CommonSection";
 import AboutGoods from "../components/UI/AboutGoods";
@@ -13,13 +13,33 @@ import '../styles/our-coffee.scss';
 
 const OurCoffee = () => {
 
+
     const inputRef = useRef('');
     const dispatch = useDispatch();
-    const filterCoffees = () => {
-		dispatch(filteredCoffees(inputRef.current.value));
+
+    const filteredByName = () => {
+		dispatch(filteredCoffeesByName(inputRef.current.value));
 	};
 
+
+    const filteredByCountryBrazil = () => {
+        dispatch(filteredCoffeesByCoutry("Brazil"))
+    }
+
+    const filteredByCountryKenya = () => {
+        dispatch(filteredCoffeesByCoutry("Kenya"))
+    }
+
+    const filteredByCountryColumbia = () => {
+        dispatch(filteredCoffeesByCoutry("Columbia"))
+    }
+
+    const all = () => {
+        dispatch(reset())
+    }
+        
     return (
+
         <>
             <CommonSection title='Our Coffe'/>
 
@@ -36,7 +56,7 @@ const OurCoffee = () => {
                         <div className="filter__look-title">
                             Lookiing for
                         </div>
-                        <input ref={inputRef} onChange={filterCoffees} type="text" placeholder="start typing here..." className="filter__look-input" />
+                        <input ref={inputRef} onChange={filteredByName} type="text" placeholder="start typing here..." className="filter__look-input" />
                     </div>
 
                     <div className="filter__country" id="myDIV">
@@ -45,13 +65,16 @@ const OurCoffee = () => {
                         </div>
 
                         <div className="filter__country-block-btn">
-                            <button className="btn">
+                            <button className='btn' onClick={all}>
+                                All
+                            </button>
+                            <button className="btn" onClick={filteredByCountryBrazil}>
                                 Brazil
                             </button>
-                            <button className='btn'>
+                            <button className='btn' onClick={filteredByCountryKenya}>
                                 Kenya
                             </button>
-                            <button className='btn'>
+                            <button className='btn' onClick={filteredByCountryColumbia}>
                                 Columbia
                             </button>
                         </div>

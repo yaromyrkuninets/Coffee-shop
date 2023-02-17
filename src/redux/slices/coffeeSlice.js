@@ -21,17 +21,19 @@ const coffeesSlice = createSlice({
     name: 'coffees',
     initialState,
     reducers: {
-        filteredCoffees: (state, action) => {
-			state.coffees = state.filteredCoffees.filter((coffee, e) =>
+        filteredCoffeesByName: (state, action) => {
+			state.coffees = state.filteredCoffees.filter((coffee) =>
                 coffee.name.toLowerCase().includes(action.payload.toLowerCase())
 			);
 		},
-        // searchByName: (state, action) => {
-        //     return {
-        //         ...state,
-        //         coffees: [...state.coffees].filter((coffees) => coffees.name.toLowerCase().includes(action.payload.toLowerCase()))
-        //     }
-        // }
+        filteredCoffeesByCoutry: (state, action) => {
+			state.coffees = state.filteredCoffees.filter((coffee) =>
+                coffee.country === action.payload
+			);
+		},
+        reset: (state) => {
+            state.coffees = state.filteredCoffees
+        }
     },
     extraReducers: (builder) => {
         builder
@@ -66,5 +68,7 @@ export default reducer;
 // );
 
 export const {
-    filteredCoffees
+    filteredCoffeesByName,
+    filteredCoffeesByCoutry,
+    reset
 } = actions
