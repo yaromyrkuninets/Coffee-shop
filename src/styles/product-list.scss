@@ -23,6 +23,15 @@
         margin-top: 10px;
         font-size: 14px;
         text-align: center;
+        color: #000;
+    }
+
+    &__title:hover {
+        font-weight: 700;
+    }
+
+    &__link {
+        text-decoration: none;
     }
 
     &__country {

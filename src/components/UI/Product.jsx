@@ -35,7 +35,7 @@ const Product = () => {
 
         return arr.map(({id, ...props}) => {
             return (
-                    <ProductList {...props}/>
+                    <ProductList {...props} id={id}/>
             )
         })
     }
