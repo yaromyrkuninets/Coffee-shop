@@ -1,14 +1,50 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+
+import {fetchCoffees} from '../redux/slices/coffeeSlice';
+import Spinner from '../components/Spinner/Spinner';
 import Beans from '../components/UI/Beans';
+import ProductList from '../components/UI/ProductList'
 
 import beans from '../assets/icons/coffe-beans_white.svg';
-import solimo from '../assets/image/items-img/solimo-coffee.jpg';
-import presto from '../assets/image/items-img/presto-coffee.jpg';
-import aromistico from '../assets/image/items-img/aromistico-coffee.jpg';
 
 import '../styles/home.scss';
 
 const Home = () => {
+
+    const coffeesItems = useSelector(state => state.coffees.coffees);
+    const coffeesLoadingStatus = useSelector(state => state.coffees.coffeesLoadingStatus);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchCoffees());
+    }, []);
+
+    if (coffeesLoadingStatus === "loading") {
+        return <Spinner/>;
+    } else if (coffeesLoadingStatus === "error") {
+        return <h5 className="text-center mt-5">Помилка загрузки</h5>
+    }
+
+    const renderCoffeesList = (arr) => {
+        if (arr.length === 0) {
+            return (
+                    <h5 className="text-center mt-5">Товару поки немає</h5>
+            )
+        }
+
+        const limitedArr = arr.slice(0, 3);
+
+        return limitedArr.map(({id, ...props}) => {
+            return (
+                    <ProductList {...props} id={id}/>
+            )
+        })
+    }
+
+    const elements = renderCoffeesList(coffeesItems);
+
     return (
         <>
         <section className="main">
@@ -52,35 +88,7 @@ const Home = () => {
         <section className="best">
             <h2 className="title">Our best</h2>
             <div className="best__product-wrapper">
-                <div className="best__product-block">
-                    <img src={solimo} alt="product" className='best__product-img' />
-                    <div className="best__product-title">
-                        Solimo Coffee Beans 2 kg
-                    </div>
-                    <div className="best__product-price">
-                        10.73$
-                    </div>
-                </div>
-
-                <div className="best__product-block">
-                    <img src={presto} alt="product" className='best__product-img' />
-                    <div className="best__product-title">
-                        Presto Coffee Beans 1 kg
-                    </div>
-                    <div className="best__product-price">
-                        15.99$
-                    </div>
-                </div>
-
-                <div className="best__product-block">
-                    <img src={aromistico} alt="product" className='best__product-img' />
-                    <div className="best__product-title">
-                        AROMISTICO Coffee 1 kg
-                    </div>
-                    <div className="best__product-price">
-                        6.99$
-                    </div>
-                </div>
+                {elements}
             </div>
         </section>
         </>
