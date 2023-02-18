@@ -1,3 +1,10 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import {fetchCoffees} from '../redux/slices/coffeeSlice';
+
+import Spinner from '../components/Spinner/Spinner';
+
 import CommonSection from "../components/UI/CommonSection";
 import Beans from "../components/UI/Beans";
 
@@ -6,6 +13,33 @@ import coffe from '../assets/image/img/about-coffeee.jpg'
 import '../styles/coffee-item.scss';
 
 const CoffeeItem = () => {
+
+    const {id} = useParams();
+    const dispatch = useDispatch();
+    const coffeesLoadingStatus = useSelector(state => state.coffees.coffeesLoadingStatus);
+
+    useEffect(() => {
+            dispatch(fetchCoffees());
+    }, []);
+
+    const coffeesItems = useSelector(state => state.coffees.coffees);
+
+    const coffeesItem = coffeesItems.find(item => item.id == id);
+
+    if (coffeesLoadingStatus === "loading") {
+        return <Spinner/>;
+    } else if (coffeesLoadingStatus === "error") {
+        return <h5 className="text-center mt-5">Помилка загрузки</h5>
+    }
+
+    if (!coffeesItem) {
+        return 'Загрузка...'
+    }
+
+    const {country, name, price} = coffeesItem
+    console.log(coffeesItem)
+
+
     return (
         <>
             <CommonSection title='Our Coffee'/>
@@ -14,14 +48,14 @@ const CoffeeItem = () => {
                 <img src={coffe} alt="coffee" className="coffee__img" />
                 
                 <div className="coffee__descr">
-                    <h2 className="title-pt-0">About it</h2>
+                    <h2 className="title-pt-0">{name}</h2>
                     <Beans/>
                     <div className="coffee__country">
                         <div className="coffee__country-title">
                             Country:
                         </div>
                         <div className="coffee__country-name">
-                            Brazil
+                            {country}
                         </div>
                     </div>
                     <div className="coffee__description">
@@ -34,7 +68,7 @@ const CoffeeItem = () => {
                             Price:
                         </div>
                         <div className="coffee__price-value">
-                            16.99$
+                            {price}$
                         </div>
                     </div>
                 </div>
