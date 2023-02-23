@@ -2,6 +2,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import {fetchCoffees} from '../redux/slices/coffeeSlice';
+import {addItem} from '../redux/slices/coffeeSlice';
+import { toast } from 'react-toastify';
 
 import Spinner from '../components/Spinner/Spinner';
 
@@ -37,7 +39,18 @@ const CoffeeItem = () => {
     }
 
     const {country, name, price} = coffeesItem
-    console.log(coffeesItem)
+    
+
+    const addToCard = () => {
+        dispatch(addItem({
+            id: id,
+            productName: name,
+            price: price,
+            imgUrl: coffe
+        }));
+
+        toast.success('Product added successfully');
+    };
 
 
     return (
@@ -70,6 +83,7 @@ const CoffeeItem = () => {
                         <div className="coffee__price-value">
                             {price}$
                         </div>
+                        <button className='buy__btn' onClick={addToCard}>Add to card</button>
                     </div>
                 </div>
             </section>

@@ -1,11 +1,13 @@
 .header {
-    width: 355px;
-    height: 40px;
     top: 30px;
     left: 128px;
     position: absolute;
+    display: flex;
+    justify-content: space-between;
 
     &__menu {
+        width: 355px;
+        height: 40px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -29,5 +31,42 @@
 
     &__nav-active {
         font-weight: 700;
+    }
+
+    &__shop {
+        margin: 15px 0 0 600px;
+        cursor: pointer;
+    }
+
+    &__shop-icons {
+        position: relative;
+    }
+
+    &__shop-icon {
+        width: 30px;
+        height: 30px;
+        color: #fff;
+        transform: scale(1);
+        transition: transform 0.3s ease-out;
+    }
+
+    &__shop-icon.clicked  {
+        transform: scale(1.2);
+        transition: transform 0.3s ease-out;
+    }
+
+    &__badge  {
+        position: absolute;
+        top: -18px;
+        left: 20px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color:brown;
+        color: #fff;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

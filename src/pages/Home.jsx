@@ -21,11 +21,11 @@ const Home = () => {
         dispatch(fetchCoffees());
     }, []);
 
-    if (coffeesLoadingStatus === "loading") {
-        return <Spinner/>;
-    } else if (coffeesLoadingStatus === "error") {
-        return <h5 className="text-center mt-5">Помилка загрузки</h5>
-    }
+    // if (coffeesLoadingStatus === "loading") {
+    //     return <Spinner/>;
+    // } else if (coffeesLoadingStatus === "error") {
+    //     return <h5 className="text-center mt-5">Помилка загрузки</h5>
+    // }
 
     const renderCoffeesList = (arr) => {
         if (arr.length === 0) {

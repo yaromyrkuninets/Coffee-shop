@@ -1,0 +1,54 @@
+.card {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+    &__wrapper {
+        margin-left: 60px;
+        width: 300px;
+        height: 230px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    &__subtotal {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__subtotal-title {
+        font-size: 19px;
+    }
+
+    &__subtotal-price {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    &__subtitle {
+        margin-top: 5px;
+        font-size: 17px;
+        color: #999;
+    }  text-decoration: none;
+    
+}
+
+tbody {
+    vertical-align: top;
+}
+
+td {
+    padding: 20px;
+}
+
+.trash {
+    cursor: pointer;
+}
+
+.card tr td img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
