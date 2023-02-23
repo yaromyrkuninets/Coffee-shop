@@ -74,6 +74,18 @@
     cursor: pointer;
 }
 
+.buy__btn-w-150 {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background: rgb(22, 21, 21);
+    color:#fff;
+    margin-top: 20px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
 .buy__btn-w-300 a {
     color: #fff;
     text-decoration: none;

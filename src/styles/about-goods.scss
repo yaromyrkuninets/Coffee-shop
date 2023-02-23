@@ -9,3 +9,18 @@
     height: 232px;
     margin-top: 25px;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .about-goods__descr {
+        margin-left: 0;
+    }
+
+    .about-goods__subtitle {
+        text-align: center;
+        font-size: 14px;
+        width: 300px;
+        margin: 20px auto 0 auto;
+        height: 100%;
+    } 
+}

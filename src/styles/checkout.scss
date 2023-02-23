@@ -42,10 +42,8 @@
 
 .checkout {
     margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
     height: 300px;
+    width: 400px;
     background-color: #f0923f;
     border-radius: 20px;
     padding: 40px;
@@ -54,8 +52,30 @@
     span {
         margin-left: 20px;
     }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+    }
 }
 
-.buy__btn-w-300 {
-    width: 150px;
+@media only screen and (max-width: 907px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+        .checkout {
+            margin: 40px auto 0 auto;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    .buy__btn-w-150 {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 576px) {
 }

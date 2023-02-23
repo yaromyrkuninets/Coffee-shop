@@ -28,7 +28,6 @@
     }
 
     &__description {
-        display: flex;
         width: 418px;
         margin-top: 16px;
     }
@@ -53,5 +52,25 @@
     &__price-value {
         font-size: 24px;
         font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .coffee {
+        display: flex;
+        flex-direction: column;
+
+        &__img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        &__descr {
+            margin: 0 auto;
+        }
+
+        &__description {
+            width: 327px;
+        }
     }
 }

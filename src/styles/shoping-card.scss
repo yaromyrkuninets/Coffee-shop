@@ -41,6 +41,7 @@ tbody {
 
 td {
     padding: 20px;
+    text-align: center;
 }
 
 .trash {
@@ -51,4 +52,29 @@ td {
     width: 80px;
     height: 80px;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 992px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+
+        &__wrapper {
+            margin: 40px auto 0 auto;
+        }
+
+        h2 {
+            margin: 0 auto;
+        }
+    }   
+}
+
+@media only screen and (max-width: 576px) {
+    th {
+        padding: 10px;
+    }
+
+    td {
+        padding: 0;
+    }
 }

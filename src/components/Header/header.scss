@@ -70,3 +70,54 @@
         justify-content: center;
     }
 }
+
+@media (max-width: 1200px) {
+    .header {
+        &__shop {
+            margin: 15px 0 0 400px;
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .header {
+        left: 50%;
+        transform: translate(-50%, 0%);
+        &__shop {
+            margin: 15px 0 0 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+}
+
+@media only screen and (max-width: 576px) {
+    .header {
+        &__menu {
+            width: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            
+        }
+        &__logo {
+            padding-left: 0;
+        }
+        &__shop {
+            margin: 15px 0 0 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .header {
+        &__menu {
+            width: 300px;
+        }
+        &__shop {
+            margin: 15px 0 0 2px;
+        }
+    }
+}

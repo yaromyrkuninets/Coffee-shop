@@ -48,22 +48,20 @@ const Home = () => {
     return (
         <>
         <section className="main">
-            <div className="container">
-                <div className="main__block">
-                    <h1 className="main__title">
-                        Everything You Love About Coffee
-                    </h1>
-                    <div className="main__coffee-beans">
-                        <hr className='main__hr'/>
-                        <img src={beans} alt="" className="main__beans-img" />
-                        <hr className='main__hr'/>
-                    </div>
-                    <h2 className="main__subtitle">
-                    We makes every day full of energy and taste <br />Want to try our beans?
-                    </h2>
-                    <div className="main__btn">
-                        <Link className='main__btn-link' to='/shop'>More</Link>
-                    </div>
+            <div className="main__block">
+                <h1 className="main__title">
+                    Everything You Love About Coffee
+                </h1>
+                <div className="main__coffee-beans">
+                    <hr className='main__hr'/>
+                    <img src={beans} alt="" className="main__beans-img" />
+                    <hr className='main__hr'/>
+                </div>
+                <h2 className="main__subtitle">
+                We makes every day full of energy and taste <br />Want to try our beans?
+                </h2>
+                <div className="main__btn">
+                    <Link className='main__btn-link' to='/shop'>More</Link>
                 </div>
             </div>
         </section>

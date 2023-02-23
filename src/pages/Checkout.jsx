@@ -118,21 +118,23 @@ const Checkout = () => {
                         </div>
 
                     <div className="checkout">
-                        <div>Total Qty: 
-                            <span>{totalQty} items</span>
+                        <div className="checkout__wrapper">
+                            <div>Total Qty: 
+                                <span>{totalQty} items</span>
+                            </div>
+                            <div>Subtotal: 
+                                <span>${totalAmount}</span>
+                            </div>
+                            <div>Shipping:
+                                <span>$0</span>
+                            </div>
+                            <div>Total cost: 
+                                <span>${totalAmount}</span>
+                            </div>
+                            <button type='submit'  className="buy__btn-w-150">
+                                Place an order
+                            </button>
                         </div>
-                        <div>Subtotal: 
-                            <span>${totalAmount}</span>
-                        </div>
-                        <div>Shipping:
-                            <span>$0</span>
-                        </div>
-                        <div>Total cost: 
-                            <span>${totalAmount}</span>
-                        </div>
-                        <button type='submit'  className="buy__btn-w-300">
-                            Place an order
-                        </button>
                     </div>
                     </Form>
                 </Formik>
